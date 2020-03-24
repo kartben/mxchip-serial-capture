@@ -8,9 +8,6 @@
 
 static char buffInfo[128];
 
-#define READ_INTERVAL 50 
-static volatile uint64_t msLastRead = 0;
-
 static DevI2C *ext_i2c;
 static LSM6DSLSensor *acc_gyro;
 
@@ -73,13 +70,5 @@ void setup()
 
 void loop()
 {
-    if (true || (SystemTickCounterRead() - msLastRead > READ_INTERVAL))
-    {
-      showMotionAccelSensor();
-      msLastRead = SystemTickCounterRead();
-    }
-    else
-    {
-    }
-  //  invokeDevKitPeripheral();
+  showMotionAccelSensor();
 }
