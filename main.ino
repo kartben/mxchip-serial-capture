@@ -43,8 +43,6 @@ void showMotionAccelSensor()
 
 void setup()
 {
-  msLastRead = 0;
-
   Screen.init();
 
   if ((ext_i2c = new DevI2C(D14, D15)) == NULL)
