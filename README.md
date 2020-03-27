@@ -4,6 +4,21 @@
 
 > A very simple MXChip AZ3166 application that dumps sensor data (accelerometer & gyroscope) as [JSON lines](http://jsonlines.org/) on the Serial port.
 >
+> ```
+> ************************************************
+> ** MXChip - Microsoft IoT Developer Kit **
+> ************************************************
+> You can 1. press Button A and reset to enter configuration mode.
+>         1. press Button B and reset to enter AP mode.
+> [67,-24,1031,1820,-2800,-70]
+> [68,-24,1030,1820,-2730,-70]
+> [68,-24,1030,1820,-2730,-70]
+> [68,-23,1030,1820,-2730,-70]
+> [68,-24,1030,1820,-2800,-70]
+> [68,-24,1030,1820,-2800,-70]
+> …
+> ```
+>
 > You can either build your own firmware from source, or simply download this [pre-built binary](https://raw.githubusercontent.com/kartben/mxchip-serial-capture/master/mxchip-serial-capture.bin), and directly install it on your MXChip. To do so, connect the device to your development machine using a USB cable, and copy the `mxchip-serial-capture.bin` file onto the XXX that should have automatically appeared (ex. `D:\` on Windows). When the copying is complete, the device reboots with the new firmware.
 >
 > Note: The accelerometer and gyroscope values are sampled and dumped to the UART as fast as possible, at a rate of around 150 Hz. It is probably possible to achieve higher rates by switching to a more efficient (binary) encoding of the values. [Pull requests](https://github.com/kartben/mxchip-serial-capture/pulls) are welcome!
