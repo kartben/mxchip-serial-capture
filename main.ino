@@ -1,5 +1,3 @@
-#define ESP32
-
 #include "Sensor.h"
 
 #include "SystemVersion.h"
